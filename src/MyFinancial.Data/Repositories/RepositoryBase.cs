@@ -13,7 +13,7 @@ namespace MyFinancial.Data.Repositories
             _context = context;
         }
 
-        public IQueryable<T> GetAll(string[]? includes)
+        public IQueryable<T> GetAll(string[]? includes = null)
         {
             var set = _context.Set<T>().AsQueryable();
 
@@ -26,7 +26,7 @@ namespace MyFinancial.Data.Repositories
             return set;
         }
 
-        public T? GetById(int id, string[]? includes)
+        public T? GetById(int id, string[]? includes = null)
         {
             var set = _context.Set<T>().AsQueryable();
 
@@ -55,6 +55,20 @@ namespace MyFinancial.Data.Repositories
             }
 
             return entity;
+        }
+
+        public bool Delete(int id)
+        {
+            var entity = GetById(id);
+
+            if(entity != null)
+            {
+                _context.Set<T>().Remove(entity);
+
+                return true;
+            }
+
+            return false;
         }
 
         public void SaveChanges() => _context.SaveChanges();

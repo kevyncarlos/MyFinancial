@@ -16,6 +16,8 @@ namespace MyFinancial.Data.Entities
         public int CompetenceId { get; set; }
         public Competence Competence { get; set; }
 
+        public InputOutputBase() { }
+
         public InputOutputBase(string description, int competenceId)
         {
             Description = description;
@@ -31,6 +33,11 @@ namespace MyFinancial.Data.Entities
         {
             WasPaid = wasPaid;
             Observation = observation;
+        }
+
+        public override string ToString()
+        {
+            return $"'{nameof(Id)}: {Id} | {nameof(CreatedAt)}: {CreatedAt:g} | {nameof(UpdatedAt)}: {UpdatedAt:g} | {nameof(Description)}: {Description} | {nameof(Value)}: {Value} | {nameof(WasPaid)}: {WasPaid} | {nameof(Observation)}: {Observation}'";
         }
     }
 }

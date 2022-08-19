@@ -8,6 +8,8 @@ namespace MyFinancial.Data.Entities
 {
     public class Input : InputOutputBase
     {
+        public Input() { }
+
         public Input(string description, int competenceId) : base(description, competenceId) { }
 
         public Input(string description, decimal value, int competenceId) : base(description, value, competenceId) { }
