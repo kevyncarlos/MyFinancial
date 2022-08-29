@@ -8,13 +8,13 @@ namespace MyFinancial.Data.Entities
 {
     public class InputOutputBase : EntityBase
     {
-        public string Description { get; set; }
+        public string? Description { get; set; }
         public decimal Value { get; set; } = 0;
         public bool WasPaid { get; set; } = false;
         public string? Observation { get; set; }
 
         public int CompetenceId { get; set; }
-        public Competence Competence { get; set; }
+        public Competence? Competence { get; set; }
 
         public InputOutputBase() { }
 
