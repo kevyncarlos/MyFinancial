@@ -452,3 +452,51 @@ $RECYCLE.BIN/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+
+
+###
+### Angular project
+###
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+/src/MyFinancial.Web/dist
+/src/MyFinancial.Web/tmp
+/src/MyFinancial.Web/out-tsc
+/src/MyFinancial.Web/bazel-out
+
+# Node
+/src/MyFinancial.Web/node_modules
+/src/MyFinancial.Web/npm-debug.log
+/src/MyFinancial.Web/yarn-error.log
+
+# IDEs and editors
+/src/MyFinancial.Web/.idea/
+/src/MyFinancial.Web/.project
+/src/MyFinancial.Web/.classpath
+/src/MyFinancial.Web/.c9/
+/src/MyFinancial.Web/*.launch
+/src/MyFinancial.Web/.settings/
+/src/MyFinancial.Web/*.sublime-workspace
+
+# Visual Studio Code
+/src/MyFinancial.Web/.vscode/*
+!/src/MyFinancial.Web/.vscode/settings.json
+!/src/MyFinancial.Web/.vscode/tasks.json
+!/src/MyFinancial.Web/.vscode/launch.json
+!/src/MyFinancial.Web/.vscode/extensions.json
+/src/MyFinancial.Web/.history/*
+
+# Miscellaneous
+/src/MyFinancial.Web/.angular/cache
+/src/MyFinancial.Web/.sass-cache/
+/src/MyFinancial.Web/connect.lock
+/src/MyFinancial.Web/coverage
+/src/MyFinancial.Web/libpeerconnection.log
+/src/MyFinancial.Web/testem.log
+/src/MyFinancial.Web/typings
+
+# System files
+/src/MyFinancial.Web/.DS_Store
+/src/MyFinancial.Web/Thumbs.db
